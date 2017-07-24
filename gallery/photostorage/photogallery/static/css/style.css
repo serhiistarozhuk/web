@@ -1,0 +1,140 @@
+/* Fonts */
+@font-face {
+    font-family: 'FallingSky';
+    src: url('fonts/FallingSkyCond.woff') format('woff'), 
+         url('fonts/FallingSkyCond.ttf')  format('truetype');
+}
+
+/* Page formatting & styling */
+
+body {
+  background-color: #DBDBDB;
+  font-family: "FallingSky", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  color: #0A0A0A;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper{
+  background: #DADADA;
+  width:1030px;
+  margin: 0 auto;
+  box-shadow: -5px 2px 5px #888888, 5px 2px 5px #888888;
+}
+
+.content {
+  background: #CCF4FF;
+  padding: 20px;
+}
+
+
+/* Header */
+
+.header {  
+  background: #0077BB;
+  height: 150px; 
+}
+
+.header-element {
+  display:inline-block;
+  align-self: center;  
+  margin-right:50px;
+}
+
+#button-new {
+  background: #00CC99;
+  background-image: -webkit-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -moz-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -ms-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -o-linear-gradient(top, #00CC99, #00A67D);
+  background-image: linear-gradient(to bottom, #00CC99, #00A67D);
+  padding: 10px 25px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#button-new:hover {
+  background: #FFCC66;
+  background-image: -webkit-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -moz-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -ms-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -o-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: linear-gradient(to bottom, #FFCC66, #FF4444);
+}
+
+#logo {
+  width: 150px;
+  height: 150px;
+  background-image: -webkit-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -moz-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -ms-linear-gradient(top, #00CC99, #00A67D);
+  background-image: -o-linear-gradient(top, #00CC99, #00A67D);
+  background-image: linear-gradient(to bottom, #00CC99, #00A67D);
+  text-align: center;
+  line-height: 150px;
+}
+
+#logo:hover {
+  background: #FFCC66;
+  background-image: -webkit-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -moz-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -ms-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: -o-linear-gradient(top, #FFCC66, #FF4444);
+  background-image: linear-gradient(to bottom, #FFCC66, #FF4444);
+}
+
+#logo img {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+}
+
+
+/* Footer */
+
+.footer {  
+  background: #0077BB;   
+  color: #FFFFFF;
+  text-align: center;
+  overflow: auto;
+  padding: 20px;
+}
+
+.footer a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+/* Other Elements */
+
+.comment-text {
+  font-family: "FallingSky", Helvetica, Roboto, Arial, sans-serif;
+  padding: 5px 0px 20px 0px;
+  font-size: 18px;
+}
+
+.date-text {
+  font-size: 14px;  
+}
+
+#comment-container {
+  padding-left: 20px;
+}
+
+
+.h_line {
+  width:100%; 
+  height:1px; 
+  background: #BBBBBB;
+}
+
+.submit-form {
+  text-align:left;
+}
+
+
+

@@ -1,0 +1,38 @@
+/* Gallery picture elements */
+ 
+#fullsize {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+  
+.preview-frame {  
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 20px 20px 20px 20px;
+  z-index: -1;
+}
+
+.preview-frame img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;  
+  border-style: solid;
+  border-width: 2px;
+  border-color: #AAAAAA;
+}
+
+/* Tooltip elements */
+
+#tooltip-frame { 
+  display: none;
+  background: #00CC99;
+  color: #FFFFFF;
+  position:absolute;
+  overflow: auto;
+  width: 160px;
+  z-index: 1; 
+  padding: 10px 10px 10px 10px;
+}

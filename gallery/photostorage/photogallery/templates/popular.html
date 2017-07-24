@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+{% for pic in pictures %}
+<div class="preview-frame" data-title="{{ pic.pic_title }}" data-date="{{pic.pic_date.date.year}}/{{pic.pic_date.date.month}}/{{pic.pic_date.date.day}} at {{pic.pic_date.time}}">
+    <a href="{% url 'pic_detail' pk=pic.pk %}" ><img src="{{ pic.pic_image.url }}" /></a>
+</div>
+<div class="views_count">
+    {{ pic.views }}
+</div>
+{% endfor %}
+{% endblock %}

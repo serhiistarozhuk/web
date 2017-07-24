@@ -1,0 +1,41 @@
+<!doctype html>
+{% load static %}
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Photostorage Gallery</title>
+    <meta name="description" content="Photostorage Gallery">
+    <meta name="author" content="content">    
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/gallery.css" %}">
+    <script src="{% static "js/main.js" %}"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-103026641-1', 'auto');
+    ga('send', 'pageview'); </script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">        
+        <a class="header-element" id="logo" href="/">
+          <img src="{% static "img/camera.png" %}" />
+        </a>        
+        <a class="header-element" id="button-new" href={% url 'pic_upload' %}>New</a>
+        <a class="header-element" id="button-new" href="/popular/">Popular</a>
+        <a class="header-element" id="button-new" href="/allphoto/">Gallery</a>
+      </div>        
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>         
+    </div>
+
+  </body>  
+</html>

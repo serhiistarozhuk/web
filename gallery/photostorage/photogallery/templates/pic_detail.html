@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load hitcount_tags %}
+{% load static %}
+{% load markdown_deux_tags %}
+{% get_hit_count for [picture] %}
+
+{% block content %}
+  <h2>{{ pic.pic_title }}</h2>
+  <img src="{{ pic.pic_image.url }}" id="fullsize" />
+  <p class="date-text">[{{pic.pic_date.date.year}}/{{pic.pic_date.date.month}}/{{pic.pic_date.date.day}} at {{pic.pic_date.time}}] by anonymous</p>
+  <p>size: {{ pic.pic_image.size|filesizeformat }}</p>
+  <p>height: {{ pic.pic_image.width }} </p>
+  <p>width: {{ pic.pic_image.height }} </p>
+  <p>views: {{ pic.views }}</p>
+  <pre class="comment-text">{{ pic.pic_text|markdown }}</pre>
+  <h2>Comments</h2>
+  {% for comment in comments %}
+    <div class="h_line"></div>
+    <div id="comment-container">   
+      <p class="date-text">[{{comment.comment_date.date.year}}/{{comment.comment_date.date.month}}/{{comment.comment_date.date.day}} at {{comment.comment_date.time}}] by anonymous</p>
+      <pre class="comment-text">{{comment.comment_text|markdown}}</pre>
+    </div>
+
+  {% endfor %}
+  <h3>Add your comment</h3>
+  <form method="POST" >
+    {% csrf_token %}
+    <table class="submit-form">
+      {{ form_comment.as_table }}
+    </table>
+    <button type="submit">Add</button>
+  </form>
+{% endblock %}
