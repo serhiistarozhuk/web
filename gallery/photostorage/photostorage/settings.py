@@ -125,4 +125,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 MEDIA_URL = 'http://127.0.0.1:8000/'
-MEDIA_ROOT = '/home/serg/PycharmProjects/gallery/photostorage/photogallery/'
+MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
