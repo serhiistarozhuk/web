@@ -1,4 +1,5 @@
 Django==1.10.5
+django-hitcount==1.2.2
 django-markdown-deux==1.0.5
 django-simple-captcha==0.5.3
 markdown2==2.3.3
