@@ -1,1 +1,1 @@
-# web
+# simple photo gallery
